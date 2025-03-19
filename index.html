@@ -1,164 +1,201 @@
-8<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bike Sales</title>
+    <title>Portfolio</title>
     <style>
-        /* Basic styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
+            background-color: #84a6e9;
         }
 
         header {
-            background: #333;
-            color: white;
-            padding: 15px;
-            font-size: 24px;
+            background-color:#8a8a8a;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative; /* Add this */
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        /* Add styles for the round profile picture */
+        .profile-picture {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px;
+            border-radius: 75%; /* Create a circular shape */
+            object-fit: cover; /* To ensure the image fills the circular area */
+            position: absolute; /* Add this */
+            top: 100px; /* Adjust top position as needed */
+            left: 45px; /* Adjust left position as needed */
         }
 
         nav {
-            background: #444;
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background: #555;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .bike {
-            background: white;
-            padding: 15px;
-            margin: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 250px;
+            background-color: #333;
+            color: #fff;
             text-align: center;
         }
 
-        .bike a {
-            display: block;
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
             text-decoration: none;
-            color: black;
+            color: #fff;
         }
 
-        .bike img {
-            width: 100%;
-            border-radius: 8px;
-            transition: transform 0.3s;
+        .section-content {
+            background-color: #fff;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
         }
 
-        .bike img:hover {
-            transform: scale(1.05);
+        .download-button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            align-self: center;
         }
 
-        .bike h3 {
-            margin: 10px 0;
+        .download-button:hover {
+            background-color: #555;
         }
 
-        .rating {
-            margin: 10px 0;
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
         }
 
-        .rating span {
-            font-size: 24px;
-            cursor: pointer;
-            color: gray;
-        }
-
-        .rating span.active {
-            color: gold;
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
-
-<header>Bike Sales</header>
-
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">Contact</a>
-</nav>
-
-<div class="container">
-    <div class="bike">
-        <a href="https://example.com/mountain-bike" target="_blank">
-            <img src="Himalayanbike.jpg" alt="Himalayanbike">
-            <h3>Mountain Bike</h3>
-            <p>Price: $500</p>
-        </a>
-        <div class="rating" data-bike="0">
-            <span onclick="rateBike(0, 1)">★</span>
-            <span onclick="rateBike(0, 2)">★</span>
-            <span onclick="rateBike(0, 3)">★</span>
-            <span onclick="rateBike(0, 4)">★</span>
-            <span onclick="rateBike(0, 5)">★</span>
+    <header>
+        <div class="header-content">
+            <!-- Add your profile picture here -->
+            <img src="simeyon.jpg" alt="Your Profile Picture" class="profile-picture">
+            <h1>G Gnana Simeyon</h1>
+            <p>BSC Computer Science</p>
         </div>
-    </div>
+    </header>
 
-    <div class="bike">
-        <a href="https://example.com/road-bike" target="_blank">
-            <img src="Roadbike.jpg" alt="Road Bike">
-            <h3>Road Bike</h3>
-            <p>Price: $700</p>
-        </a>
-        <div class="rating" data-bike="1">
-            <span onclick="rateBike(1, 1)">★</span>
-            <span onclick="rateBike(1, 2)">★</span>
-            <span onclick="rateBike(1, 3)">★</span>
-            <span onclick="rateBike(1, 4)">★</span>
-            <span onclick="rateBike(1, 5)">★</span>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+           
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2><u>About Me</u></h2>
+            <p>I'm a <b>web development</b> expert who is passionate about creating dynamic and user-friendly websites. 
+                I'm driven by the desire to craft high-performance web applications that enhance user experience and provide
+                 seamless digital solutions. With an high skill set in the field, I'm dedicated to staying up to date 
+                 with the latest trends and innovations in the 
+                 web development landscape. I'm also committed to helping others learn more about web technologies, 
+                 best practices, and how to build secure and scalable websites.</p>
+
         </div>
-    </div>
+    </section>
 
-    <div class="bike">
-        <a href="https://example.com/electric-bike" target="_blank">
-            <img src="Electricbike.png" alt="Electric Bike">
-            <h3>Electric Bike</h3>
-            <p>Price: $1200</p>
-        </a>
-        <div class="rating" data-bike="2">
-            <span onclick="rateBike(2, 1)">★</span>
-            <span onclick="rateBike(2, 2)">★</span>
-            <span onclick="rateBike(2, 3)">★</span>
-            <span onclick="rateBike(2, 4)">★</span>
-            <span onclick="rateBike(2, 5)">★</span>
+    <section id="education">
+        <div class="section-content">
+            <h2><u>Education</u></h2>
+            <p>Madras University - BSC CS </p>
+            
+            
         </div>
-    </div>
-</div>
+    </section>
 
-<script>
-    function rateBike(bikeIndex, rating) {
-        let ratings = document.querySelectorAll(`.rating[data-bike="${bikeIndex}"] span`);
-        ratings.forEach((star, index) => {
-            if (index < rating) {
-                star.classList.add("active");
-            } else {
-                star.classList.remove("active");
-            }
+    <section id="skills">
+        <div class="section-content">
+            <h2><u>Skills</u></h2>
+            <ul>
+                <li>React</li>
+                <li>Mern</li>
+                <li>Cloud Computing</li>
+                <li>Python</li>
+                <li>Spring</li>
+                <li>ML & AI</li>
+                <li>java</li>
+                <li>c++</li>
+                <li>Java script</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2><u>Projects</u></h2>
+            <ul>
+                <li><a href="#">E Cart website</a></li>
+                <li><a href="#">Cloud Security IBM</a></li>
+                <li><a href="#">IBM chatbot</a></li>
+                <li><a href="#">College Portal</a></li> 
+                <!-- Add more project links here -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+    
+        <div class="section-content">
+            <center>
+            <h2>Resume</h2>
+            <a href="simeyonresume(1).pdf" target="_blank" class="download-button">Download CV</a>
+        </center>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2025 G Gnana Simeyon copyrights reserved</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling to section when clicking on navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
-    }
-</script>
-
+    </script>
 </body>
 </html>
